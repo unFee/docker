@@ -1,0 +1,5 @@
+/laravel/node_modules
+/laravel/vendor
+/laravel/bootstrap
+*.env
+
