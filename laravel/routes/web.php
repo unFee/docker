@@ -20,3 +20,7 @@ Route::get('/db_test', [SampleController::class, 'db']);
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

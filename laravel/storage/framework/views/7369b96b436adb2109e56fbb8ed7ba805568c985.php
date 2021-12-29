@@ -85,13 +85,12 @@ unset($__errorArgs, $__bag); ?>
 
                                 </button>
 
-                                <!-- パスワード再設定リンク -->
-                                <!-- <?php if(Route::has('password.request')): ?>
+                                <?php if(Route::has('password.request')): ?>
                                     <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
                                         <?php echo e(__('Forgot Your Password?')); ?>
 
                                     </a>
-                                <?php endif; ?> -->
+                                <?php endif; ?>
                             </div>
                         </div>
                     </form>

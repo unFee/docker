@@ -87,6 +87,22 @@ http://localhost:3000
 
 ---
 
+### Login画面生成手順
+
+```
+phpコンテナに入った状態で
+
+php artisan ui react --auth
+npm install resolve-url-loader@^4.0.0 --save-dev --legacy-peer-deps
+npm install
+
+npm run dev
+```
+
+
+
+---
+
 ### 参考文献
 
 https://qiita.com/A-Kira/items/1c55ef689c0f91420e81
