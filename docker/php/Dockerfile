@@ -33,6 +33,15 @@ COPY ./php.ini /usr/local/etc/php/
 RUN apt update && apt install git zip -y
 RUN pecl install redis
 
+### npm インストール
+RUN apt-get -y update
+RUN apt-get install -y \
+    curl \
+    gnupg
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install npm@latest
+
 ### mysql利用のため、ドライバ追加
 RUN docker-php-ext-install pdo_mysql
 
@@ -46,9 +55,6 @@ WORKDIR /var/www
 
 ### laravel インストール
 RUN composer global require "laravel/installer"
-
-### npm インストール
-RUN apt install nodejs npm -y
 
 ### redis利用
 RUN git clone https://github.com/phpredis/phpredis.git /usr/src/php/ext/redis && \
