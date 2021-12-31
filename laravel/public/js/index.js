@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./resources/ts/app.tsx":
-/*!******************************!*\
-  !*** ./resources/ts/app.tsx ***!
-  \******************************/
+/***/ "./resources/ts/index.tsx":
+/*!********************************!*\
+  !*** ./resources/ts/index.tsx ***!
+  \********************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -24,19 +24,31 @@ var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/r
 
 var react_dom_1 = __importDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
 
-var App = function App() {
-  var title = 'TypeScript React !';
-  return react_1["default"].createElement("h1", null, title);
+var Index = function Index() {
+  var title = 'TypeScript';
+  return react_1["default"].createElement("div", null, react_1["default"].createElement("h1", null, title), react_1["default"].createElement("div", {
+    className: "container"
+  }, react_1["default"].createElement("div", {
+    className: "row justify-content-center"
+  }, react_1["default"].createElement("div", {
+    className: "col-md-8"
+  }, react_1["default"].createElement("div", {
+    className: "card"
+  }, react_1["default"].createElement("div", {
+    className: "card-header"
+  }, "Example Component"), react_1["default"].createElement("div", {
+    className: "card-body"
+  }, "I'm an example component!"))))));
 };
 
-react_dom_1["default"].render(react_1["default"].createElement(App, null), document.getElementById('example'));
+react_dom_1["default"].render(react_1["default"].createElement(Index, null), document.getElementById('main_contents'));
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/sass/index.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/index.scss ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -29942,8 +29954,8 @@ if (false) {} else {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/js/app": 0,
-/******/ 			"css/app": 0
+/******/ 			"/js/index": 0,
+/******/ 			"css/index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -29993,8 +30005,8 @@ if (false) {} else {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/ts/app.tsx")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index"], () => (__webpack_require__("./resources/ts/index.tsx")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/index"], () => (__webpack_require__("./resources/sass/index.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
