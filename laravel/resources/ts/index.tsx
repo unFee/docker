@@ -1,26 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
- 
-const Index = () => {
-    const title: string = 'TypeScript'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Search from './search';
+import Top from './top';
+
+const Index: React.FC = () => {
     return (
         <div>
-            <h1>{title}</h1>
-            <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Example Component</div>
-                        <div className="card-body">I'm an example component!</div>
-                    </div>
-                </div>
-            </div>
-            </div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/search' element={ <Search /> } />
+                    <Route path='/home' element={ <Top /> } />
+                </Routes>
+            </BrowserRouter>
         </div>
     )
 }
- 
-ReactDOM.render(
-    <Index />,
-    document.getElementById('main_contents')
-)
+
+const element = <Index />;
+const target = document.getElementById('main_contents');
+ReactDOM.render(element, target)
