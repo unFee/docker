@@ -31,7 +31,7 @@ class SampleController extends Controller
 
     public function api(Request $request): JsonResponse
     {
-        sleep(20);
+        sleep(5);
         $array = [
             'title' => 'testAPI',
             'name' => $request->name
