@@ -28,8 +28,7 @@ docker rm $(docker ps -q -a)
 ### phpコンテナに入って
 docker exec -it list_php bash
 
-### .env 作成する (↓のものに置き換え)
-### https://drive.google.com/file/d/1KHum629LNS-DDRzYx6DKL7OPvh6lfDMp/view?usp=sharing
+### .env 作成する (置き換え)
 
 cp .env.example .env
 
