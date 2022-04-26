@@ -1,9 +1,9 @@
-# docker_list
+# docker
 
 ## セット手順
 
 ```
-git clone git@github.com:FujimoriYuya/docker_list.git
+git clone git@github.com:unFee/docker.git
 cd docker_list
 
 ### docker 起動
