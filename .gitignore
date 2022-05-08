@@ -2,5 +2,5 @@
 /laravel/vendor
 /laravel/bootstrap
 /laravel/storage
-*.env
+
 
